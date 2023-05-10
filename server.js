@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const api = require('./routes/routes.js');
+const api = require('./routes/apiroutes.js');
 const HTMLroutes = require('./routes/HTMLroutes.js');
 
 const app = express();
@@ -10,7 +10,7 @@ const PORT = process.env.port || 3001;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
-// app.use('/api', api);
+app.use('/api', api);
 app.use('/',HTMLroutes)
 
 
