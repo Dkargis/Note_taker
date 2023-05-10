@@ -5,7 +5,7 @@ const HTMLroutes = require('./routes/HTMLroutes.js');
 
 const app = express();
 
-const PORT = process.env.port || 3001;
+const PORT = process.env.port;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
