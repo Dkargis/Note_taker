@@ -16,5 +16,13 @@ router.post("/notes", (req, res) => {
 });
 });
 
+router.get("/notes", (req, res) => {
+    fs.readFile("./db/db.json", "utf8", (err, data) => {
+        const notes = JSON.parse(data);
+    res.json(notes);
+});
+});
+
+
 
 module.exports = router;
