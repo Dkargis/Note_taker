@@ -29,17 +29,10 @@ router.get('/notes/:id', async (req, res) => {
     const noteId = req.params.id;
     try {
       const note = await getNoteById(noteId);
-      if (!note) {
-        return res.status(404).json({ error: 'Note not found' });
-      }
-      return res.json(note);
     } catch (err) {
       console.error(err);
       return res.status(500).json({ error: 'Server error' });
     }
   });
-
-
-
 
 module.exports = router;

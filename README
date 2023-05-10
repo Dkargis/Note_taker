@@ -1,0 +1,4 @@
+This application is to save notes by using api requests to add new notes when the feilds are filled out.
+When you click on a note will will grab that note by ID to then display it on the right hand side.
+This app uses express to handle the api requests and fs to read and write to the db.json file.
+
